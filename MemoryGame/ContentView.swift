@@ -9,16 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     let icons : [String] = ["☺️","🥹","😇","🥳","🤓","🥵","🥶","👻","🎃","🤢"]
-    @State var cardCount = 2
+    @State var cardCount = 4
+    @State var kolor : Color = .blue
     var body: some View {
         VStack {
+            Text("Memo").font(.largeTitle)
             ScrollView{
                 CardDisplay
             }
             HStack{
-                removeCard
+                //removeCard
+                //Spacer()
+                //addCard
+                MotiveButton(icon: "😀", text: "Motyw 1", color: $kolor)
                 Spacer()
-                addCard
+                MotiveButton(icon: "🤌🏻", text: "Motyw 2", color: $kolor)
+                Spacer()
+                MotiveButton(icon: "🐵", text: "Motyw 3", color: $kolor)
+                
             }
         }
         .padding()
@@ -27,25 +35,25 @@ struct ContentView: View {
     
     
     var CardDisplay: some View{
-        LazyVGrid(columns:[GridItem(.adaptive(minimum:120))]){
+        LazyVGrid(columns:[GridItem(.adaptive(minimum:80))]){
             ForEach(0..<cardCount, id: \.self){
-                index in CardView(icon: icons[index]).aspectRatio(4/1, contentMode: .fit)
+                index in CardView(icon: icons[index], color: kolor).aspectRatio(2/3, contentMode: .fit)
             }
-        }.foregroundColor(.blue)
+        }.foregroundColor(kolor)
     }
     func adjustCardNumber(by_offset: Int, symbol: String) -> some View{
         return Button(symbol){
             if(by_offset+cardCount >= 0 && by_offset+cardCount <= icons.count){
                 cardCount += by_offset
             }
-        }.frame(width: 60, height: 40).border(.blue)
+        }.frame(width: 60, height: 40).border(kolor)
     }
-    var addCard: some View{
-        adjustCardNumber(by_offset: 2, symbol: "+").disabled(cardCount == icons.count)
-    }
-    var removeCard: some View{
-        adjustCardNumber(by_offset: -2, symbol: "-").disabled(cardCount < 2)
-    }
+//    var addCard: some View{
+//        adjustCardNumber(by_offset: 2, symbol: "+").disabled(cardCount == icons.count)
+//    }
+//    var removeCard: some View{
+//        adjustCardNumber(by_offset: -2, symbol: "-").disabled(cardCount < 2)
+//    }
 }
 
 

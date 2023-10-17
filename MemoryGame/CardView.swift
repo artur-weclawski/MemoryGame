@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     @State var state: Bool = true
     var icon : String
+    var color: Color
     var body: some View {
         ZStack{
             let base = RoundedRectangle(cornerRadius: 12)
@@ -18,7 +19,7 @@ struct CardView: View {
                 base.strokeBorder(lineWidth: 2.0)
                 Text(icon).font(.largeTitle)
             }.opacity(state ? 1 : 0)
-            base.fill(.blue).opacity(state ? 0 : 1)
+            base.fill(color).opacity(state ? 0 : 1)
         }.onTapGesture{
             state.toggle()
         }
@@ -26,5 +27,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(state: true, icon: "☺️")
+    CardView(state: true, icon: "☺️", color: .blue)
 }
