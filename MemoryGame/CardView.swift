@@ -25,7 +25,6 @@ struct CardView: View {
         }
     }
 }
-
 #Preview {
     CardView(state: true, icon: "☺️", color: .blue)
 }

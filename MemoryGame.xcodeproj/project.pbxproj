@@ -16,6 +16,7 @@
 		3F5093622ADED044005FBE4F /* MemoryGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5093612ADED044005FBE4F /* MemoryGameUITestsLaunchTests.swift */; };
 		3F50936F2ADED065005FBE4F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50936E2ADED065005FBE4F /* CardView.swift */; };
 		3F5093712ADEDCFC005FBE4F /* MotiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */; };
+		3FCCBB652AFA9C8700BB8937 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		3F5093612ADED044005FBE4F /* MemoryGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F50936E2ADED065005FBE4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotiveButton.swift; sourceTree = "<group>"; };
+		3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3F50934A2ADED044005FBE4F /* Preview Content */,
 				3F50936E2ADED065005FBE4F /* CardView.swift */,
 				3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */,
+				3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCCBB652AFA9C8700BB8937 /* MemoGameModel.swift in Sources */,
 				3F5093472ADED043005FBE4F /* ContentView.swift in Sources */,
 				3F5093712ADEDCFC005FBE4F /* MotiveButton.swift in Sources */,
 				3F50936F2ADED065005FBE4F /* CardView.swift in Sources */,
