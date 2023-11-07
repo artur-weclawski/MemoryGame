@@ -15,13 +15,12 @@ struct MemoGameModel<CardContent>{
         }
     }
     func chooseCard(card: Card<CardContent>){
-        
     }
 }
 
 struct Card<CardContent>{
     var id : String
-    var isFacedUp : Bool
-    var isMatched : Bool
+    var isFacedUp : Bool = false
+    var isMatched : Bool = false
     var content : CardContent
 }
