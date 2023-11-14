@@ -6,21 +6,31 @@
 //
 
 import Foundation
-struct MemoGameModel<CardContent>{
-    private var cards = Array<CardContent>()
+struct MemoGameModel<CardContent> where CardContent : Equatable{
+    public var cards: Array<Card>
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent){
-        for i in 0..<numberOfPairsOfCards{
-            cards.append(cardContentFactory(i))
-            cards.append(cardContentFactory(i))
+        cards = []
+        for i in 0..<max(2,numberOfPairsOfCards){
+            let content = cardContentFactory(i)
+            cards.append(Card(content: content, id: "\(i)a"))
+            cards.append(Card(content: content, id: "\(i)b"))
         }
     }
-    func chooseCard(card: Card<CardContent>){
+    mutating func chooseCard(_ card: Card){
+        if let i = cards.firstIndex(where: {$0.id == card.id}){
+            cards[i].isFacedUp.toggle()
+        }
+    }
+    
+    mutating func shuffle(){
+        cards.shuffle()
+    }
+    struct Card : Equatable, Identifiable{
+        var isFacedUp : Bool = false
+        var isMatched : Bool = false
+        var content : CardContent
+        var id : String
     }
 }
 
-struct Card<CardContent>{
-    var id : String
-    var isFacedUp : Bool = false
-    var isMatched : Bool = false
-    var content : CardContent
-}
+

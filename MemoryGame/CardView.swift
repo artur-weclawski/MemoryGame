@@ -8,23 +8,28 @@
 import SwiftUI
 
 struct CardView: View {
-    @State var state: Bool = true
-    var icon : String
-    var color: Color
-    var body: some View {
+    var card: MemoGameModel<String>.Card
+    init(_ card: MemoGameModel<String>.Card){
+        self.card = card
+    }
+        var body: some View {
         ZStack{
             let base = RoundedRectangle(cornerRadius: 12)
             Group{
                 base.fill(.white)
-                base.strokeBorder(lineWidth: 2.0)
-                Text(icon).font(.largeTitle)
-            }.opacity(state ? 1 : 0)
-            base.fill(color).opacity(state ? 0 : 1)
-        }.onTapGesture{
-            state.toggle()
+                base.strokeBorder(lineWidth: 2)
+                Text(card.content)
+                    .font(.system(size: 200))
+                    .minimumScaleFactor(0.01)
+                    .aspectRatio(contentMode: .fit)
+            }
+            .opacity(card.isFacedUp ? 1 : 0)
+            base.fill().opacity(card.isFacedUp ? 0 : 1)
         }
-    }
+        .opacity(card.isFacedUp || !card.isMatched ? 1: 0)
+        }
 }
-#Preview {
-    CardView(state: true, icon: "☺️", color: .blue)
-}
+
+//#Preview {
+////    CardView(state: true, icon: "☺️", color: .blue)
+//}
