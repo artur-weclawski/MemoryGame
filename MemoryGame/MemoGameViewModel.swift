@@ -31,7 +31,7 @@ class MemoGameViewModel : ObservableObject{
         model.shuffle()
     }
     func choose(_ card: MemoGameModel<String>.Card){
-        return model.chooseCard(card)
+        return model.choose(card)
     }
     @Published var themeColor = Color.blue
     func changeApplicationTheme(color: Color){

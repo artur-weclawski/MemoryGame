@@ -15,12 +15,12 @@ struct ContentView: View {
             Text("Memo").font(.largeTitle)
             ScrollView{
                 CardDisplay.foregroundColor(viewModel.themeColor)
-                Spacer()
-                shuffleButton
+                
             }
-            
-            Spacer()
+            shuffleButton
+                .padding()
             motiveButton
+                .padding()
         }
         .padding()
         

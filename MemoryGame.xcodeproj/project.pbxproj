@@ -18,6 +18,8 @@
 		3F5093712ADEDCFC005FBE4F /* MotiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */; };
 		3F879FDA2B03C9F8000E4766 /* MemoGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F879FD92B03C9F8000E4766 /* MemoGameViewModel.swift */; };
 		3FCCBB652AFA9C8700BB8937 /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */; };
+		3FDB93E72B16459C00FACECE /* CirclePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB93E62B16459C00FACECE /* CirclePart.swift */; };
+		3FDB93EB2B164B5D00FACECE /* TransformIntoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDB93EA2B164B5D00FACECE /* TransformIntoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotiveButton.swift; sourceTree = "<group>"; };
 		3F879FD92B03C9F8000E4766 /* MemoGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameViewModel.swift; sourceTree = "<group>"; };
 		3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
+		3FDB93E62B16459C00FACECE /* CirclePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePart.swift; sourceTree = "<group>"; };
+		3FDB93EA2B164B5D00FACECE /* TransformIntoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformIntoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				3F5093702ADEDCFC005FBE4F /* MotiveButton.swift */,
 				3FCCBB642AFA9C8700BB8937 /* MemoGameModel.swift */,
 				3F879FD92B03C9F8000E4766 /* MemoGameViewModel.swift */,
+				3FDB93E62B16459C00FACECE /* CirclePart.swift */,
+				3FDB93EA2B164B5D00FACECE /* TransformIntoCard.swift */,
 			);
 			path = MemoryGame;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 			files = (
 				3FCCBB652AFA9C8700BB8937 /* MemoGameModel.swift in Sources */,
 				3F5093472ADED043005FBE4F /* ContentView.swift in Sources */,
+				3FDB93EB2B164B5D00FACECE /* TransformIntoCard.swift in Sources */,
+				3FDB93E72B16459C00FACECE /* CirclePart.swift in Sources */,
 				3F879FDA2B03C9F8000E4766 /* MemoGameViewModel.swift in Sources */,
 				3F5093712ADEDCFC005FBE4F /* MotiveButton.swift in Sources */,
 				3F50936F2ADED065005FBE4F /* CardView.swift in Sources */,
