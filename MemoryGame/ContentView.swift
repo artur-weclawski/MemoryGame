@@ -14,11 +14,16 @@ struct ContentView: View {
         VStack {
             Text("Memo").font(.largeTitle)
             ScrollView{
-                CardDisplay.foregroundColor(viewModel.themeColor)
+                CardDisplay.animation(.default,value:viewModel.cards).foregroundColor(viewModel.themeColor)
                 
             }
-            shuffleButton
-                .padding()
+            HStack{
+                Text("Wynik: \(viewModel.points)").font(.system(size: 25))
+                Spacer()
+                shuffleButton
+                    .padding()
+            }
+
             motiveButton
                 .padding()
         }
